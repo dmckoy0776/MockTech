@@ -1,25 +1,7 @@
 public class IntArrayUtils {
 
-    public int sumOfAllSubArrays(int[] array){
-        int length = array.length -1;
-        int totalSum = 0;
-        for (int i = 0; i <= length ; i++) {
-            totalSum += array[i];
-            int j = i;
-           do {
-               totalSum+= array[i];
-               totalSum += array[j];
-               j++;
-           }
-           while (j <= length);
-           totalSum -= array[length];
-        }
-        totalSum += array[0] + array[length-1];
-        return totalSum;
-    }
 
-
-    public int sumOfAllSubArraysTheMathWay(int [] array){
+    public int sumOfAllSubArraysSingleLoopMath(int [] array){
         int length = array.length;
         int total = 0;
         for (int i = 0; i < length; i++) {
@@ -37,6 +19,23 @@ public class IntArrayUtils {
         return (int)(-1*squareIndex) + lengthTimesIndex + length;
     }
 
+    public int sumOfAllSubArraysMultiLoop(int[] array){
+        int length = array.length -1;
+        int totalSum = 0;
+        for (int i = 0; i <= length ; i++) {
+            totalSum += array[i];
+            int j = i;
+            do {
+                totalSum+= array[i];
+                totalSum += array[j];
+                j++;
+            }
+            while (j <= length);
+            totalSum -= array[length];
+        }
+        totalSum += array[0] + array[length-1];
+        return totalSum;
+    }
 
     public int[] bubbleSortDesc(int[] arr){
         for(int i = 0; i < arr.length; i++){
