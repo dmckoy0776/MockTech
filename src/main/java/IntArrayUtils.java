@@ -65,34 +65,6 @@ public class IntArrayUtils {
         return secondLargest;
     }
 
-    public String [] getCommonStrings(String [] one, String [] two){
-        int lengthOne = one.length;
-        int lengthTwo = two.length;
-
-        String [] common = new String [0];
-
-        for (int i =0 ; i < lengthOne; i++) {
-            for(int j = 0; j < lengthTwo; j++ ) {
-                if (one[i] == two[j]){
-                    common= changeArraySize(common, one[i]);
-                }
-            }
-        }
-
-        return common;
-    }
-
-    public String[] changeArraySize (String [] originalArray, String add) {
-        int originalLength = originalArray.length;
-        String [] newArray = new String[originalLength+1] ;
-        for (int i =0; i < originalLength; i++ ){
-            newArray[i] = originalArray[i];
-        }
-        newArray[originalLength] = add;
-        return newArray;
-
-
-    }
 
 
 }
