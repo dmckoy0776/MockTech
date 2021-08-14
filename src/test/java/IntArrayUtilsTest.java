@@ -25,7 +25,7 @@ public class IntArrayUtilsTest {
         int expected = 68;
 
         //when
-        int actual = utils.theMathWay(test);
+        int actual = utils.sumOfAllSubArraysTheMathWay(test);
 
         Assert.assertEquals(expected, actual);
     }
@@ -38,7 +38,7 @@ public class IntArrayUtilsTest {
         int expected = 130;
 
         //when
-        int actual = utils.theMathWay(test);
+        int actual = utils.sumOfAllSubArraysTheMathWay(test);
 
         Assert.assertEquals(expected, actual);
 

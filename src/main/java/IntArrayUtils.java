@@ -19,7 +19,7 @@ public class IntArrayUtils {
     }
 
 
-    public int theMathWay(int [] array){
+    public int sumOfAllSubArraysTheMathWay(int [] array){
         int length = array.length;
         int total = 0;
         for (int i = 0; i < length; i++) {
