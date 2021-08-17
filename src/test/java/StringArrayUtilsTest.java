@@ -38,4 +38,49 @@ public class StringArrayUtilsTest {
         //then
         Assert.assertTrue(check);
     }
+
+    @Test
+    public void fizziesTestWith4(){
+        //given
+        StringArrayUtils test = new StringArrayUtils();
+        int n = 4;
+        String[] expected = {"1", "2", "Fizz", "4"};
+
+        //when
+        String [] actual = test.replaceWithFizzies(n);
+
+        //then
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void fizziesTestWith5(){
+        //given
+        StringArrayUtils test = new StringArrayUtils();
+        int n = 5;
+        String[] expected = {"1", "2", "Fizz", "4", "Buzz"};
+
+        //when
+        String [] actual = test.replaceWithFizzies(n);
+
+        //then
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void fizziesTestWith15(){
+        //given
+        StringArrayUtils test = new StringArrayUtils();
+        int n = 15;
+        String[] expected = {"1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"};
+
+        //when
+        String [] actual = test.replaceWithFizzies(n);
+
+        //then
+        Assert.assertArrayEquals(expected, actual);
+    }
+
+
+
 }
